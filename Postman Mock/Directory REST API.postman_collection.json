@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "b6acc815-50db-4282-a6b2-05feca4df5fd",
+		"name": "Directory REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juan Carlos\",\r\n    \"surname\": \"Estrada Barragan\",\r\n    \"age\": 27,\r\n    \"salary\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/customers",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Customer Photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Juan Carlos EB/Desktop/user.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/customers/uploadPhoto/625f42f0d0a39e4a88e9a32a",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"customers",
+						"uploadPhoto",
+						"625f42f0d0a39e4a88e9a32a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer with Photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Juan",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "Estrada",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "27",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "7000",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Juan Carlos EB/Desktop/user.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/customers/registerCustomerWithPhoto",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"customers",
+						"registerCustomerWithPhoto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/customers",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/customers/625f42f0d0a39e4a88e9a32a",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"customers",
+						"625f42f0d0a39e4a88e9a32a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juan C.\",\r\n    \"surname\": \"Estrada B.\",\r\n    \"age\": 27,\r\n    \"salary\": 7000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/customers/625f4ec1e4ea287be2b39850",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"customers",
+						"625f4ec1e4ea287be2b39850"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/customers/625f4ec1e4ea287be2b39850",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"customers",
+						"625f4ec1e4ea287be2b39850"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080/api",
+			"type": "string"
+		}
+	]
+}
