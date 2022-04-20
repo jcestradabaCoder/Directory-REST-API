@@ -1,0 +1,52 @@
+¿Qué es la programación reactiva?
+
+La programación reactiva es un paradigma enfocado en el trabajo con flujos de datos finitos o infinitos de manera asíncrona.
+
+Flujo -> Es un conjunto de elementos o uno solo.
+
+Síncrona -> Un solo proceso para todas las tareas que corren y se ejecutan de manera secuencial.
+Asíncrona -> Permite atender varias tareas en procesos en paralelo y de forma simultánea.
+
+¿Qué es un observable y un observer?
+
+Observable:
+Es una lista de elementos asíncronos.
+
+Observer						Observable
+
+Transformación
+Suscribe						Emite
+[] <----------------------------[]
+[] <----------------------------[]
+[] <----------------------------[]
+
+Observable -> Emite elementos
+Observer -> Suscribe a la emision del observable
+
+Observable					suscribe	Observer	Transforma
+Radio					----------> 	Persona 	(Escucha)
+(Emite canciones)		----------> 	Persona		(Baila)
+
+
+¿Qué es Spring WebFlux?
+
+WebFlux es un framework parte de Spring 5 que está basado en Project Reactor el cual nos ofrece anotaciones para poder implementar 
+aplicaciones reactivas.
+
+Es una alternativa al tradicional Spring MVC ampliamente usado hasta hoy, nos ofrece las siguientes características:
+
+-> Non_blocking thread: los hilos que pueden trabajar de manera concurrente sin tener que esperar a la tarea previa.
+-> Reactive Stream API: Nos ofrece la posibilidad de crear streams asíncronos que no son bloqueantes.
+-> Asyncronus data processing: Permite procesar la data de manera asíncrona sin interrumpir la ejecución de la aplicación principal.
+
+¿Que es MongoDB?
+
+El gestor de base de datos MongoDB se puede asociar a un conjunto de gestores de bases de datos que no tienen como lenguaje principal
+SQL para su manipulación.
+
+Los gestores de BD NoSQL no requieren estructuras fijas como tablas, normalmente no soportan operaciones join y presentan como una gran
+ventaja que pueden escalar en forma sencilla.
+
+Spring Data actualmente admite Mongo, Cassandra, Redis, Couchbase.
+
+https://projectreactor.io
