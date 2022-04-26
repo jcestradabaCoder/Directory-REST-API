@@ -7,6 +7,6 @@ Tecnologías utilizadas para la contrucción de la API REST:
 - Mongo DB
 
 Resources:
-Info
+- Info
 
 https://drive.google.com/drive/folders/1eeSO2MirKuylKOCd2eMVaQwE2Rmq4Uk7?usp=sharing
